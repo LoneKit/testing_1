@@ -1,0 +1,18 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\SwamPyaePaing\OneDrive\Desktop\testing_1\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\SwamPyaePaing\OneDrive\Desktop\testing_1
+configfile: pytest.ini
+collecting ... collected 19 items / 16 deselected / 3 selected
+
+tests/test_bookstore.py::test_slow_bulk_import_100k_products_are_stored PASSED [ 33%]
+tests/test_bookstore.py::test_slow_search_large_catalogue_repeated PASSED [ 66%]
+tests/test_bookstore.py::test_slow_many_registrations_and_logins PASSED  [100%]
+
+============================== slowest durations ==============================
+0.69s call     tests/test_bookstore.py::test_slow_search_large_catalogue_repeated
+0.56s call     tests/test_bookstore.py::test_slow_many_registrations_and_logins
+0.10s call     tests/test_bookstore.py::test_slow_bulk_import_100k_products_are_stored
+
+(6 durations < 0.005s hidden.  Use -vv to show these durations.)
+====================== 3 passed, 16 deselected in 1.38s =======================

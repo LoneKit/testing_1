@@ -1,0 +1,19 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\SwamPyaePaing\OneDrive\Desktop\testing_1\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\SwamPyaePaing\OneDrive\Desktop\testing_1
+configfile: pytest.ini
+collecting ... collected 19 items / 12 deselected / 7 selected
+
+tests/test_bookstore.py::test_smoke_register_new_user PASSED             [ 14%]
+tests/test_bookstore.py::test_smoke_login_correct_password_works PASSED  [ 28%]
+tests/test_bookstore.py::test_smoke_login_rejects_wrong_password PASSED  [ 42%]
+tests/test_bookstore.py::test_smoke_add_product_is_saved PASSED          [ 57%]
+tests/test_bookstore.py::test_smoke_add_to_cart_puts_item_in_cart PASSED [ 71%]
+tests/test_bookstore.py::test_smoke_checkout_nonempty_cart_returns_order PASSED [ 85%]
+tests/test_bookstore.py::test_smoke_end_to_end_shopping_flow PASSED      [100%]
+
+============================== slowest durations ==============================
+
+(21 durations < 0.005s hidden.  Use -vv to show these durations.)
+====================== 7 passed, 12 deselected in 0.03s =======================
