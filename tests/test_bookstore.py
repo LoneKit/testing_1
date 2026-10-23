@@ -89,6 +89,25 @@ def test_smoke_end_to_end_shopping_flow():
 
 
 
+# ========================= REGRESSION TESTS ==========================
+# Each test must FAIL on the unfixed code and PASS after the fix.
+
+@pytest.mark.regression
+def test_regression_cart_total_includes_last_item():
+    """Author: <Your Real Name>.
+    Function: Cart.total().
+    Wrong behaviour: the last item in the cart is not counted. With products
+    priced 10, 20 and 30 in the cart, total() returned 30.
+    Correct behaviour: the total is the sum of every item, so 60."""
+    catalog = Catalog()
+    catalog.add_product(1, "A", 10)
+    catalog.add_product(2, "B", 20)
+    catalog.add_product(3, "C", 30)
+    cart = Cart(catalog)
+    for product_id in (1, 2, 3):
+        cart.add(product_id)
+    assert cart.total() == 60
+
 # ============================ SLOW TESTS =============================
 # Slow = large data volumes / many loop iterations. They must PASS on the
 # shipped code (so they assert things that are not affected by the bugs).
